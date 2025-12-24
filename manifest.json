@@ -1,0 +1,16 @@
+{
+    "name": "Sudoku Simple UI",
+    "version": "1.0.0",
+    "description": "Simpler UI for sudoku.com",
+    "manifest_version": 3,
+    "author": "Guri",
+    "content_scripts": [
+        {
+          "matches": [
+            "https://sudoku.com/*" 
+          ],
+          "js": ["script.js"],
+          "run_at": "document_idle"
+        }
+      ]
+}
