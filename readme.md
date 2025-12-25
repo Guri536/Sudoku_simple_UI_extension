@@ -1,33 +1,48 @@
 # **Sudoku Simple UI**
 
-**Sudoku Simple UI** is a Chrome extension designed to provide a cleaner, distraction-free experience for [sudoku.com](https://sudoku.com). It removes unnecessary page elements, improves the layout, and adds convenient keyboard shortcuts.
+**Sudoku Simple UI** is a lightweight Chrome extension for [sudoku.com](https://sudoku.com). While the original site is great, it feels cluttered, sidebars, and extra articles. This extension removes unwanted page elements and provides quality-of-life features.
 
-## **Features**
+## **Key Features**
 
-* **Distraction-Free Interface**: Automatically removes sidebars, tip articles, and the site footer to focus the view on the game board.  
-* **Keyboard Shortcut**: Press the `.` key to toggle the **Pencil/Notes** tool without needing to click the UI button.  
-* **Adaptive Layout**: Automatically adjusts the game container's left margin based on the window width to provide white space for pinning a notepad window or video player.
+### **Customizable Interface**
 
-## **Installation**
+Accessed via the extension popup, you can toggle the following UI enhancements in real-time:
 
-1. Download or clone this repository to your local machine.  
-2. Open Google Chrome and navigate to chrome://extensions/.  
-3. Enable **Developer mode** in the top-right corner.  
-4. Click the **Load unpacked** button.  
-5. Select the directory containing the manifest.json file.
+* **Dark Mode**: Replaces the bright white background with a dark theme, reducing eye strain immensely.  
+* **Clean Mode (Hide Sidebar/Footer)**: Instantly removes the right-hand sidebar and site footer to eliminate visual noise.  
+* **Tip Suppression**: Hides the "How to Play" articles and promotional content located below the game board.  
+* **Adaptive Centering**: A unique feature that adjusts the game container’s margin. This is perfect for users who want to pin a small video player or notepad to the side of their browser window without overlapping the game.
 
-## **Usage**
+### **Enhanced Controls**
 
-1. Navigate to [sudoku.com](https://sudoku.com).  
-2. The extension will automatically clean up the interface upon loading.  
-3. Use the `.` key to toggle notes/pencil mode while playing.
+* **Smart Pencil Toggle**: Press the `.` key on your keyboard to toggle **Notes/Pencil mode**. No more moving your mouse away from the grid just to switch input types.
 
-## **Technical Details**
+## **Installation Guide**
 
-* **Manifest Version**: 3  
-* **Permissions**: Access to https://sudoku.com/\*  
-* **Content Script**: Runs script.js on document\_idle.
+Since this is a developer-focused extension, follow these steps to load it manually:
+
+1. **Download**: Clone this repository or download the ZIP file and extract it to a permanent folder on your computer.  
+2. **Extensions Page**: Open Google Chrome and go to chrome://extensions/.  
+3. **Developer Mode**: Toggle the **Developer mode** switch in the top-right corner.  
+4. **Load Unpacked**: Click the **Load unpacked** button and select the folder where you extracted the extension (the folder containing manifest.json).  
+5. **Pin it**: For quick access to settings, click the puzzle icon in Chrome and pin **Sudoku Simple UI**.
+
+## **How to Use**
+
+1. Navigate to any game on [sudoku.com](https://sudoku.com).  
+2. Click the extension icon in your toolbar to open the **Settings Menu**.  
+3. Toggle features like **Dark Mode** or **Hide Sidebar**. Your choices are saved to your Chrome profile and will persist across sessions.  
+4. While playing, use the . key to toggle notes quickly.
+
+## **Technical Overview**
+
+* **Manifest V3**: Built using the latest Chrome Extension standards for better security and performance.  
+* **Content Scripts**: Uses script.js to inject styles and event listeners directly into the page DOM.  
+* **Storage API**: Utilizes chrome.storage.sync to sync your UI preferences across all devices where you are logged into Chrome.  
+* **Pointer Events**: The keyboard shortcut simulates native pointer events to ensure compatibility with the site's React-based UI.
 
 ## **Author**
 
-**Guri**
+**Guri** 
+
+*Disclaimer: This extension is not affiliated with, maintained by, or endorsed by sudoku.com.*
