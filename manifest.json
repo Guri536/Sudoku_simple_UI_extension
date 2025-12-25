@@ -1,16 +1,37 @@
 {
-    "name": "Sudoku Simple UI",
-    "version": "1.0.0",
-    "description": "Simpler UI for sudoku.com",
-    "manifest_version": 3,
-    "author": "Guri",
-    "content_scripts": [
-        {
-          "matches": [
-            "https://sudoku.com/*" 
-          ],
-          "js": ["script.js"],
-          "run_at": "document_idle"
-        }
-      ]
+  "name": "Sudoku Simple UI",
+  "version": "1.1.0",
+  "description": "Simpler UI for sudoku.com with Dark Mode",
+  "manifest_version": 3,
+  "author": "Guri",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "assets/Logo_16.png",
+    "32": "assets/Logo_32.png",
+    "48": "assets/Logo_48.png",
+    "128": "assets/Logo_128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sudoku Settings",
+    "default_icon": {
+      "16": "assets/Logo_16.png",
+      "32": "assets/Logo_32.png",
+      "48": "assets/Logo_48.png",
+      "128": "assets/Logo_128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sudoku.com/*"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }
